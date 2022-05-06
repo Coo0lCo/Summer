@@ -8,9 +8,12 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * @Author:SCBC_LiYongJie
  * @time:2022/1/20
- *
+ *      bean的装配构造
+ *      会有多种构造方式
+ *      无参构造方式
+ *      含参数的动态实例化构造方式
+ *      ......
  */
-
 
 public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory{
 
@@ -20,7 +23,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         Object bean = null;
         try {
             //java 9之后弃用了bean = beanDefinition.getBeanClass().newInstance();这种方式获取实例,新的方式是通过获取public的无参构造器构造对象
-            //那有参数又咋办呀！！！这里只能搞个无参的。。。。。
+            //那有参数又咋办呀！！！这里只能搞个无参的。。。。。在version3中我们分别会实现Jdk 创建/ Cglib动态创建实例化对象 ，并处理参数传递的问题
             bean = beanDefinition.getBeanClass().getDeclaredConstructor().newInstance();
         } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
             e.printStackTrace();
