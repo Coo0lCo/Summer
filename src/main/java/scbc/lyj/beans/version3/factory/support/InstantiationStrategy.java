@@ -13,7 +13,6 @@ import java.lang.reflect.Constructor;
  * 2.Cglib动态实例化bean的版本
  */
 public interface InstantiationStrategy {
-
     Object instantiate(BeanDefinition beanDefinition, String beanName, Constructor<?> constructor, Object... args);
 
 }

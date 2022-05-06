@@ -1,4 +1,4 @@
-package scbc.lyj.beans.version2;
+package scbc.lyj.beans.version1;
 
 /**
  * @Author:SCBC_LiYongJie

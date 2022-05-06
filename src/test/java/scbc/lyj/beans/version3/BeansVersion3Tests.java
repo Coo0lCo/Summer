@@ -13,11 +13,17 @@ public class BeansVersion3Tests {
     @Test
     public void test(){
         DefaultListableBeanFactory defaultListableBeanFactory = new DefaultListableBeanFactory();
+
         BeanDefinition beanDefinition = new BeanDefinition(UserService.class);
+
         defaultListableBeanFactory.registerBeanDefinition("userService",beanDefinition);
+
         UserService userService = (UserService) defaultListableBeanFactory.getBean("userService","Jie");
+
         userService.printfUserName();
+
         System.out.println(userService);
+
     }
 
 }

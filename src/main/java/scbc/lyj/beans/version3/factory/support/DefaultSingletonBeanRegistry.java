@@ -11,9 +11,9 @@ import java.util.concurrent.ConcurrentHashMap;
  * {@code @Date} 2022/5/5
  */
 public class DefaultSingletonBeanRegistry  implements SingletonBeanRegistry {
-    private final Map<String,Object> singletonObjects = new ConcurrentHashMap<>(256);
 
-    @Override
+    private final Map<String,Object> singletonObjects = new ConcurrentHashMap<>(256);
+        @Override
     public Object getSingleton(String beanName) {
         return singletonObjects.get(beanName);
     }

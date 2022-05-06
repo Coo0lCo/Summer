@@ -1,11 +1,9 @@
 package scbc.lyj.beans.version3.factory.support;
 
-
 import scbc.lyj.beans.version3.factory.BeansException;
 import scbc.lyj.beans.version3.factory.config.BeanDefinition;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
